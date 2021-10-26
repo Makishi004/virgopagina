@@ -7,11 +7,14 @@
   "scripts": {
     "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
     "css-watch": "npm run css-build -- --watch",
-    "start": "npm run css-watch"
+    "start": "npm run css-watch",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
   },
   "license": "ISC",
   "devDependencies": {
     "bulma": "^0.9.3",
+    "html-webpack-plugin": "^5.5.0",
     "node-sass": "^6.0.1"
   },
   "dependencies": {
@@ -19,8 +22,8 @@
     "webpack-cli": "^4.9.1"
   },
   "browser": {
-  "fs": false,
-   "path": false,
-   "os": false
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }
