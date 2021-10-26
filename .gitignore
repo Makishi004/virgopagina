@@ -1,4 +1,13 @@
-mybulma/node_modules
+node_modules
 mybulma/sass
-mybulma/package.json
-mybulma/package-lock.json
+package.json
+package-lock.json
+webpack.config.js
+src/buttons.js
+src/buttons.js
+src/createPlaylist.js
+src/main.js
+src/playlist.js
+src/script.js
+src/english.html
+src/index.html

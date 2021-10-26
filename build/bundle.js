@@ -34,10 +34,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _but
 /*!*************************!*\
   !*** ./src/playlist.js ***!
   \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"songs\": () => (/* binding */ songs)\n/* harmony export */ });\nconst fs = __webpack_require__(/*! fs */ \"fs\"); //Modulo de NodeJS para controlar archivos del sistema\r\nconst dir = `./music`;\r\nconst files = fs.readdirSync(dir);\r\n\r\n\r\nconst cuco = [];\r\nconst natalia_lafourcade = [];\r\nconst dojacatxmendes = [];\r\nconst monsieur = [];\r\nconst babi = [];\r\nconst lol = [];\r\nconst unknown = [];\r\n\r\nlet musicDir = `music/`;\r\nfor (const file of files) {\r\n\tif (file.startsWith(\"Babi_-_\")) babi.push(musicDir + file);\t\r\n\telse if(file.startsWith(\"Monsieur_-_\")) monsieur.push(musicDir + file);\r\n\telse if(file.startsWith(\"League_of_Legends_-_\")) lol.push(musicDir + file);\t\r\n\telse if(file.startsWith(\"Cuco_-_\")) cuco.push(musicDir + file);\t\r\n\telse if(file.startsWith(\"Doja_Cat_x_Mendes_-_\")) dojacatxmendes.push(musicDir + file);\t\r\n\telse if(file.startsWith(\"Natalia_Lafourcade_-_\")) natalia_lafourcade.push(musicDir + file);\t\r\n\telse unknown.push(musicDir + file);\t\r\n}\r\nconsole.log(`Babi: ${babi}\r\nMonsieur: ${monsieur}\r\nCuco: ${cuco}\r\nLeague of Legends: ${lol}\r\nDoja Cay x Mendes: ${dojacatxmendes}\r\nNatalia Lafourcade: ${natalia_lafourcade}`);\r\n\r\nlet songs = [];\r\n\tsongs.push(babi);\r\n\tsongs.push(lol);\r\n\tsongs.push(monsieur);\r\n\tsongs.push(dojacatxmendes);\r\n\tsongs.push(natalia_lafourcade);\r\n\tsongs.push(cuco);\r\n\r\n\n\n//# sourceURL=webpack://mybulma/./src/playlist.js?");
+eval("let allSongs = '../music/Babi_-_3_kilos.mp3,../music/Babi_-_Cocaína.mp3,../music/Babi_-_Incondicional.mp3,../music/Babi_-_Se_me_fue.mp3,../music/Cuco_-_Piel_canela.mp3,../music/Doja_Cat_x_Mendes_-_Say_So.mp3,../music/League_of_Legends_-_Legends_Never_Die.mp3,../music/League_of_Legends_-_Phoenix.mp3,../music/League_of_Legends_-_Take_Over_Worlds_2020.mp3,../music/Monsieur_-_Nuestra_canción.mp3,../music/Natalia_Lafourcade_-_Lo_que_construimos.mp3';\n\tallSongs = allSongs.split(',');\n\n\tconst cuco = [];\n\tconst natalia_lafourcade = [];\n\tconst dojacatxmendes = [];\n\tconst monsieur = [];\n\tconst babi = [];\n\tconst lol = [];\n\tconst unknown = [];\n\n\tlet songs = [];\n\n\tfor (let i = 0; allSongs.length > i; i++) {\n\t\tif (allSongs[i].includes(\"Babi_-_\")) babi.push(allSongs[i]);\t\n\t\telse if(allSongs[i].includes(\"Monsieur_-_\")) monsieur.push(allSongs[i]);\n\t\telse if(allSongs[i].includes(\"League_of_Legends_-_\")) lol.push(allSongs[i]);\t\n\t\telse if(allSongs[i].includes(\"Cuco_-_\")) cuco.push(allSongs[i]);\t\n\t\telse if(allSongs[i].includes(\"Doja_Cat_x_Mendes_-_\")) dojacatxmendes.push(allSongs[i]);\t\n\t\telse if(allSongs[i].includes(\"Natalia_Lafourcade_-_\")) natalia_lafourcade.push(allSongs[i]);\t\n\t\telse unknown.push(allSongs[i]);\t\n\t};\n\tsongs = [];\n\t\tsongs.push(babi);\n\t\tsongs.push(lol);\n\t\tsongs.push(monsieur);\n\t\tsongs.push(dojacatxmendes);\n\t\tsongs.push(natalia_lafourcade);\n\t\tsongs.push(cuco);\n\n\texports.songs = songs;\n\tconsole.log(songs);\n\n//# sourceURL=webpack://mybulma/./src/playlist.js?");
 
 /***/ }),
 
@@ -48,17 +47,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ (() => {
 
 eval("\r\n//\t\tRESPONSIVE BUTTON CLICK(mobile and tablet)\r\nconst burger = document.querySelector(\"#burger\");\r\nconst links = document.querySelector(\"#nav-links\");\r\n\r\n\r\nburger.addEventListener(\"click\",()=>{\r\n\tlinks.classList.toggle(\"is-active\");\r\n});\r\n\r\n\r\n//\t\tNAVIGATION VERTICAL\r\n//\tYoutube\r\nconst onhover = document.getElementById(\"youtube-button\");\r\nconst youtubers = document.getElementById(\"youtubers-list\");\r\n\r\nonhover.addEventListener(\"mouseover\",()=>{\r\n\tsetTimeout(()=>{youtubers.style.display = \"block\"},200);\r\n});\r\nonhover.addEventListener(\"mouseout\",()=>{\r\n\tsetTimeout(()=>{youtubers.style.display = \"none\"},5000)\r\n});\n\n//# sourceURL=webpack://mybulma/./src/script.js?");
-
-/***/ }),
-
-/***/ "fs":
-/*!*********************!*\
-  !*** external "fs" ***!
-  \*********************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("fs");
 
 /***/ })
 
