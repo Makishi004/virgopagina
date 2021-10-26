@@ -1,4 +1,21 @@
-let allSongs = '../music/Babi_-_3_kilos.mp3,../music/Babi_-_Cocaína.mp3,../music/Babi_-_Incondicional.mp3,../music/Babi_-_Se_me_fue.mp3,../music/Cuco_-_Piel_canela.mp3,../music/Doja_Cat_x_Mendes_-_Say_So.mp3,../music/League_of_Legends_-_Legends_Never_Die.mp3,../music/League_of_Legends_-_Phoenix.mp3,../music/League_of_Legends_-_Take_Over_Worlds_2020.mp3,../music/Monsieur_-_Nuestra_canción.mp3,../music/Natalia_Lafourcade_-_Lo_que_construimos.mp3';
+const fs = require('fs'); 
+// import * as fs from 'fs';	//Modulo de NodeJS para controlar archivos del sistema
+const dir = `../music`;
+const files = fs.readdirSync(dir);
+
+
+let songs = [];
+
+let musicDir = `../music/`;
+for (const file of files) {
+	songs.push(musicDir + file)
+}
+
+
+
+console.log(songs);
+
+fs.writeFile('playlist.js', `let allSongs = '${songs}';
 	allSongs = allSongs.split(',');
 
 	const cuco = [];
@@ -29,4 +46,11 @@ let allSongs = '../music/Babi_-_3_kilos.mp3,../music/Babi_-_Cocaína.mp3,../musi
 		songs.push(cuco);
 
 	exports.songs = songs;
-	console.log(songs);
+	console.log(songs);`, function (error) {
+	if (error) {
+		console.log(error);
+	}
+	console.log('Archivo creado.');
+});
+
+// export { songs };
