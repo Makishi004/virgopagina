@@ -31,39 +31,59 @@
 	</nav>
 	<div class="columns is-desktop">
 		<nav class="column menu is-2">
-			<p class="menu-label px-1">Redes Sociales</p>
+			<p class="menu-label px-1 has-text-centered-mobile  has-text-centered-tablet">Redes Sociales</p>
 			<ul class="menu-list">
-				<li id="youtube-button"><a href="https://www.youtube.com"><i class="fab fa-youtube pr-1 has-text-danger"></i>Youtube</a>
+				<li id="youtube-button"><a class="has-text-centered-mobile has-text-centered-tablet has-text-left-desktop"><i class="fab fa-youtube pr-1 has-text-danger"></i>Youtube</a>
 					<ul id="youtubers-list" class="is-size-7" style="display:none">
-						<p class="menu-label">Entretenimiento<i class="far fa-laugh-squint pl-1"></i></p>
-						<li><a href="https://www.youtube.com/c/Mrdedreviil">El ded</a></li>
-						<li><a href="https://www.youtube.com/user/DrossRotzank">DrossRotzank</a></li>
-						<li><a href="https://www.youtube.com/c/elrubiusOMG">ElRubiusOMG</a></li>
-						<li><a href="https://www.youtube.com/channel/UCdvyCPDTkkfd4MwqD7ZkGgg">Juan Guarnizo</a></li>
-						<p class="menu-label">Tecnologias<i class="fas fa-code pl-1"></i></p>
-						<li><a href="https://www.youtube.com/c/AbsoluteSite">Absolute</a></li>
-						<li><a href="https://www.youtube.com/c/HolaMundoDev">Hola Mundo</a></li>
-						<li><a href="https://www.youtube.com/c/soydalto">Soy Dalto</a></li>
+						<p class="menu-label has-text-centered-mobile has-text-centered-tablet">Entretenimiento<i class="far fa-laugh-squint pl-1"></i></p>
+						<li><a href="https://www.youtube.com/c/Mrdedreviil" class="has-text-centered-mobile has-text-centered-tablet">El ded</a></li>
+						<li><a href="https://www.youtube.com/user/DrossRotzank" class="has-text-centered-mobile has-text-centered-tablet">DrossRotzank</a></li>
+						<li><a href="https://www.youtube.com/c/elrubiusOMG" class="has-text-centered-mobile has-text-centered-tablet">ElRubiusOMG</a></li>
+						<li><a href="https://www.youtube.com/channel/UCdvyCPDTkkfd4MwqD7ZkGgg" class="has-text-centered-mobile has-text-centered-tablet">Juan Guarnizo</a></li>
+						<p class="menu-label has-text-centered-mobile has-text-centered-tablet">Tecnologias<i class="fas fa-code pl-1"></i></p>
+						<li><a href="https://www.youtube.com/c/AbsoluteSite" class="has-text-centered-mobile has-text-centered-tablet">Absolute</a></li>
+						<li><a href="https://www.youtube.com/c/HolaMundoDev" class="has-text-centered-mobile has-text-centered-tablet">Hola Mundo</a></li>
+						<li><a href="https://www.youtube.com/c/soydalto" class="has-text-centered-mobile has-text-centered-tablet">Soy Dalto</a></li>
 					</ul>
 				</li>
-				<li><a href="https://web.whatsapp.com"><i class="fab fa-whatsapp pr-1 has-text-success"></i>WhatsApp</a></li>
-				<li><a href="https://www.facebook.com"><i class="fab fa-facebook pr-1 has-text-link"></i>Facebook</a></li>
-				<li><a href="https://www.twitter.com"><i class="fab fa-twitter pr-1 has-text-info"></i>Twitter</a></li>
+				<li><a href="https://web.whatsapp.com" class="has-text-centered-mobile has-text-centered-tablet has-text-left-desktop"><i class="fab fa-whatsapp pr-1 has-text-success"></i>WhatsApp</a></li>
+				<li><a href="https://www.facebook.com" class="has-text-centered-mobile has-text-centered-tablet has-text-left-desktop"><i class="fab fa-facebook pr-1 has-text-link"></i>Facebook</a></li>
+				<li><a href="https://www.twitter.com" class="has-text-centered-mobile has-text-centered-tablet has-text-left-desktop"><i class="fab fa-twitter pr-1 has-text-info"></i>Twitter</a></li>
 			</ul>
 			<p class="menu-label px-1"></p>
 		</nav>
 		<div class="section column is-6">
-			<h1 class="title">Titulo</h1>
-			<p>Esta pagina está destinada a facilitar el acceso a sitios web de importancia personal, ya sea para entretenimiento o aprendizaje.</p>
+			<h1 class="title has-text-centered-mobile has-text-centered-tablet">Titulo</h1>
+			<p class="has-text-centered-mobile has-text-centered-tablet">Esta pagina está destinada a facilitar el acceso a sitios web de importancia personal, ya sea para entretenimiento o aprendizaje.</p>
 		</div>
 		<div class="section column is-4">
-			<h3 class="subtitle">Links de utilidad</h3>
-			<p>Algunos links de utilidad estarían aquí.</p>
+			<div class="has-background-danger py-2 px-4">
+				<audio id="reproductor"></audio>
+					<i class="fas fa-play is-clickable"></i>			<!-- PLAY Y PAUSA -->
+					<i class="fas fa-stop is-clickable"></i>			<!-- STOP -->
+					
+					<i class="fas fa-volume-down is-clickable"></i>		<!-- BAJAR VOLUMEN -->
+					<i class="fas fa-volume-up is-clickable"></i>		<!-- SUBIR VOLUMEN -->
+					<i class="fas fa-volume-mute is-clickable"></i>		<!-- MUTEAR -->
+					
+					<i class="fas fa-backward is-clickable"></i>		<!-- RETROCEDER 5 SEGUNDOS-->
+					<i class="fas fa-forward is-clickable"></i>			<!-- ADELANTAR 5 SEGUNDOS-->
+					<i class="fas fa-step-backward is-clickable"></i>	<!-- CANCION ANTERIOR -->
+					<i class="fas fa-step-forward is-clickable"></i>	<!-- SIGUIENTE CANCION -->
+					<i class="fas fa-long-arrow-alt-left is-clickable"></i>
+						<!-- Anterior album -->
+					<i class="fas fa-long-arrow-alt-right is-clickable"></i>
+						<!-- Siguiente album -->
+					<div class="is-pulled-right">
+						<i class="fas fa-redo is-clickable"></i>		<!-- REPETIR DESDE EL INICIO-->
+					</div>
+			</div>
 		</div>
 	</div>
 	<footer class="footer">
 		<p class="is-size-7 has-text-centered">Copyright 2021 - Maki VirgoPagina</p>
 	</footer>
 	<script type="text/javascript" src="script.js"></script>
+	<script type="module" src="buttons.js"></script>
 </body>
 </html>
