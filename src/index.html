@@ -3,16 +3,16 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<link rel="shortcut icon" href="../src/ahegao icon.png">
+	<link rel="shortcut icon" href="./src/ahegao icon.png">
 	<title>Prueba Bulma</title>
 	<script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
-  	<link rel="stylesheet" type="text/css" href="../mybulma/css/mystyles.css">
-<script defer src="bundle.js"></script></head>
+  	<link rel="stylesheet" type="text/css" href="./mybulma/css/mystyles.css">
+</head>
 <body>
 	<nav class="navbar">
 		<div class="navbar-brand">
 			<a href="index.html" class="navbar-item">
-				<img src="../src/ahegao icon.png" style="max-height: 70px">
+				<img src="./src/ahegao icon.png" style="max-height: 70px">
 			</a>
 			<a class="navbar-burger is-size-1" id="burger">
 				<span></span>
@@ -52,31 +52,38 @@
 			</ul>
 			<p class="menu-label px-1"></p>
 		</nav>
-		<div class="section column is-6">
+		<div class="section column is-6" style="min-height: 80vh;">
 			<h1 class="title has-text-centered-mobile has-text-centered-tablet">Titulo</h1>
 			<p class="has-text-centered-mobile has-text-centered-tablet">Esta pagina está destinada a facilitar el acceso a sitios web de importancia personal, ya sea para entretenimiento o aprendizaje.</p>
 		</div>
 		<div class="section column is-4">
-			<div class="has-background-danger py-2 px-4">
-				<audio id="reproductor"></audio>
-					<i class="fas fa-play is-clickable"></i>			<!-- PLAY Y PAUSA -->
-					<i class="fas fa-stop is-clickable"></i>			<!-- STOP -->
+			<div class="py-2 px-4">
+				<section style="display: flex;justify-content: center">
+					<progress class="progress is-normal" value="0" max="100" id="progressbar"></progress>
+				</section>
+				<section>
+					<audio id="reproductor"></audio>
+					<i class="fas fa-play is-clickable ml-2 mr-1"></i>			<!-- PLAY Y PAUSA -->
+					<i class="fas fa-stop is-clickable mr-3"></i>			<!-- STOP -->
 					
-					<i class="fas fa-volume-down is-clickable"></i>		<!-- BAJAR VOLUMEN -->
-					<i class="fas fa-volume-up is-clickable"></i>		<!-- SUBIR VOLUMEN -->
-					<i class="fas fa-volume-mute is-clickable"></i>		<!-- MUTEAR -->
+					<i class="fas fa-volume-down is-clickable mr-1"></i>		<!-- BAJAR VOLUMEN -->
+					<i class="fas fa-volume-up is-clickable mr-1"></i>		<!-- SUBIR VOLUMEN -->
+					<i class="fas fa-volume-mute is-clickable mr-2"></i>		<!-- MUTEAR -->
 					
-					<i class="fas fa-backward is-clickable"></i>		<!-- RETROCEDER 5 SEGUNDOS-->
-					<i class="fas fa-forward is-clickable"></i>			<!-- ADELANTAR 5 SEGUNDOS-->
-					<i class="fas fa-step-backward is-clickable"></i>	<!-- CANCION ANTERIOR -->
-					<i class="fas fa-step-forward is-clickable"></i>	<!-- SIGUIENTE CANCION -->
-					<i class="fas fa-long-arrow-alt-left is-clickable"></i>
+					<i class="fas fa-backward is-clickable mr-1"></i>		<!-- RETROCEDER 5 SEGUNDOS-->
+					<i class="fas fa-forward is-clickable mr-2"></i>			<!-- ADELANTAR 5 SEGUNDOS-->
+
+					<i class="fas fa-step-backward is-clickable mr-1"></i>	<!-- CANCION ANTERIOR -->
+					<i class="fas fa-step-forward is-clickable mr-2"></i>	<!-- SIGUIENTE CANCION -->
+
+					<i class="fas fa-long-arrow-alt-left is-clickable mr-1"></i>
 						<!-- Anterior album -->
-					<i class="fas fa-long-arrow-alt-right is-clickable"></i>
+					<i class="fas fa-long-arrow-alt-right is-clickable mr-2"></i>
 						<!-- Siguiente album -->
-					<div class="is-pulled-right">
+					<div class="is-pulled-right mr-1">
 						<i class="fas fa-redo is-clickable"></i>		<!-- REPETIR DESDE EL INICIO-->
 					</div>
+				</section>
 			</div>
 		</div>
 	</div>
